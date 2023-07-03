@@ -1,5 +1,6 @@
 import { createMemo, For, Show } from "solid-js";
 import { characterNameByInternalId } from "~/common/ids";
+import { HexagonIcon } from "~/components/common/icons";
 import { RenderData, replayStore } from "~/state/replayStore";
 
 export function PlayerHUD(props: { player: number }) {
@@ -33,13 +34,18 @@ export function PlayerHUD(props: { player: number }) {
       <Show when={renderData()}>
         <For each={Array(renderData()!.playerState.stocksRemaining).fill(0)}>
           {(_, i) => (
-            <circle
-              cx={`${position().x - 2 * (1.5 - i())}%`}
-              cy={`-${position().y}%`}
-              r={5}
-              fill={renderData()!.innerColor}
-              stroke="black"
-            />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              stroke="white"
+              stroke-width="10px"
+              viewBox="0 12.37 184.77 160.02"
+              x={`${position().x - 2 * (25 + 1.5 - i())}%`}
+              y={`-${position().y}%`}
+              height={10}
+            >
+              <path d="M0,92.375l46.188-80h92.378l46.185,80l-46.185,80H46.188L0,92.375z"/>
+            </svg>
           )}
         </For>
         <text

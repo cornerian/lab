@@ -78,6 +78,21 @@ export function FilmIcon(props: IconProps) {
 }
 
 // https://svgrepo.com/
+export function HexagonIcon(props: IconProps) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="currentColor"
+      viewBox="0 0 184.751 184.751"
+      {...props}
+    >
+      <title>{props.title}</title>
+      <path d="M0,92.375l46.188-80h92.378l46.185,80l-46.185,80H46.188L0,92.375z"/>
+    </svg>
+  );
+}
+
+// https://svgrepo.com/
 export function TagIcon(props: IconProps) {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" 

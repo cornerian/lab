@@ -1,7 +1,8 @@
 import {
   ControllerIcon,
-  FilmSlateIcon,
   GitHubIcon,
+  StatsIcon,
+  TagIcon,
   TwitterIcon,
   VideoLibraryIcon,
 } from "~/components/common/icons";
@@ -23,7 +24,15 @@ export function Navigation() {
               }}
               onClick={() => setSidebar("local replays")}
             />
-            <FilmSlateIcon
+            <StatsIcon
+              title="Analysis"
+              classList={{
+                "py-4 cursor-pointer -mx-7 px-7": true,
+                "bg-slippi-50": currentSidebar() === "analysis",
+              }}
+              onClick={() => setSidebar("analysis")}
+            />
+            <TagIcon
               title="Clips"
               classList={{
                 "py-4 cursor-pointer -mx-7 px-7": true,

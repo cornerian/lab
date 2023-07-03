@@ -25,6 +25,9 @@ module.exports = {
           to: { "stroke-dashoffset": 0 },
         },
       },
+      fontFamily: {
+        'archivoblack': ['Archivo Black', 'sans-serif']
+      },
     },
   },
   plugins: [],

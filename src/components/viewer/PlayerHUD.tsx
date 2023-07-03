@@ -13,7 +13,7 @@ export function PlayerHUD(props: { player: number }) {
   );
   const position = createMemo(() => ({
     x: -30 + 20 * props.player, // ports at: -30%, -10%, 10%, 30%
-    y: 40, // y% is flipped by css to make the text right-side up.
+    y: 35, // y% is flipped by css to make the text right-side up.
   }));
   const name = createMemo(() =>
     renderData()
@@ -36,34 +36,34 @@ export function PlayerHUD(props: { player: number }) {
           {(_, i) => (
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
+              fill={renderData()!.innerColor}
               stroke="white"
               stroke-width="10px"
               viewBox="0 12.37 184.77 160.02"
-              x={`${position().x - 2 * (25 + 1.5 - i())}%`}
+              x={`${position().x - 50 - 3 * (1.5 - i())}%`}
               y={`-${position().y}%`}
-              height={10}
+              height={15}
             >
               <path d="M0,92.375l46.188-80h92.378l46.185,80l-46.185,80H46.188L0,92.375z"/>
             </svg>
           )}
         </For>
         <text
-          style={{ font: "bold 15px sans-serif", transform: "scaleY(-1)" }}
+          style={{ font: "bold 40px Archivo Black", transform: "scaleY(-1)" }}
           x={`${position().x}%`}
-          y={`${position().y + 4}%`}
+          y={`${position().y + 7}%`}
           text-anchor="middle"
           textContent={`${Math.floor(renderData()!.playerState.percent)}%`}
-          fill={renderData()!.innerColor}
-          stroke="black"
+          fill="currentColor"
+          stroke="white"
         />
         <text
           style={{ font: "bold 15px sans-serif", transform: "scaleY(-1)" }}
           x={`${position().x}%`}
-          y={`${position().y + 7}%`}
+          y={`${position().y + 11}%`}
           text-anchor="middle"
           textContent={name()}
-          fill={renderData()!.innerColor}
+          fill="currentColor"
           stroke="black"
         />
         <Show when={replayStore.isDebug}>

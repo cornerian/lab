@@ -65,7 +65,7 @@ export function PlayerHUD(props: { player: number }) {
           text-anchor="middle"
           textContent={name()}
           fill="white"
-          stroke="black"
+          stroke={renderData()!.innerColor}
           stroke-width="0.5"
         />
         <Show when={replayStore.isDebug}>

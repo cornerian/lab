@@ -84,7 +84,9 @@ export function Timer() {
       text-anchor="middle"
       y="-42%"
       textContent={time()}
-      class="fill-slate-800"
+      fill="white"
+      stroke="black"
+      stroke-width="0.5"
     />
   );
 }

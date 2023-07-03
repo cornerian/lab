@@ -56,6 +56,7 @@ export function PlayerHUD(props: { player: number }) {
           textContent={`${Math.floor(renderData()!.playerState.percent)}%`}
           fill="currentColor"
           stroke="white"
+          stroke-width="0.5"
         />
         <text
           style={{ font: "bold 15px sans-serif", transform: "scaleY(-1)" }}
@@ -63,8 +64,9 @@ export function PlayerHUD(props: { player: number }) {
           y={`${position().y + 11}%`}
           text-anchor="middle"
           textContent={name()}
-          fill="currentColor"
+          fill="white"
           stroke="black"
+          stroke-width="0.5"
         />
         <Show when={replayStore.isDebug}>
           <Debug position={position()} renderData={renderData()!} />

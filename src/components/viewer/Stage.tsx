@@ -64,10 +64,10 @@ function Battlefield() {
   return (
     <>
       <Grid blastzones={blastzones} />
-      <polyline points={mainStage.join(" ")} class="fill-slate-800" />
+      <polyline points={mainStage.join(" ")} class="fill-slate-200" />
       <For each={platforms}>
         {(points) => (
-          <polyline points={points.join(" ")} class="stroke-slate-800" />
+          <polyline points={points.join(" ")} class="stroke-slate-200" />
         )}
       </For>
       <rect
@@ -76,7 +76,7 @@ function Battlefield() {
         width={blastzones[1][0] - blastzones[0][0]}
         height={blastzones[1][1] - blastzones[0][1]}
         fill="none"
-        class="stroke-slate-800"
+        class="stroke-slate-200"
       />
     </>
   );
@@ -105,10 +105,10 @@ function Dreamland() {
   return (
     <>
       <Grid blastzones={blastzones} />
-      <polyline points={mainStage.join(" ")} class="fill-slate-800" />
+      <polyline points={mainStage.join(" ")} class="fill-slate-200" />
       <For each={platforms}>
         {(points) => (
-          <polyline points={points.join(" ")} class="stroke-slate-800" />
+          <polyline points={points.join(" ")} class="stroke-slate-200" />
         )}
       </For>
       <rect
@@ -117,7 +117,7 @@ function Dreamland() {
         width={blastzones[1][0] - blastzones[0][0]}
         height={blastzones[1][1] - blastzones[0][1]}
         fill="none"
-        class="stroke-slate-800"
+        class="stroke-slate-200"
       />
     </>
   );
@@ -148,14 +148,14 @@ function FinalDestination() {
   return (
     <>
       <Grid blastzones={blastzones} />
-      <polyline points={mainStage.join(" ")} class="fill-slate-800" />
+      <polyline points={mainStage.join(" ")} class="fill-slate-200" />
       <rect
         x={blastzones[0][0]}
         y={blastzones[0][1]}
         width={blastzones[1][0] - blastzones[0][0]}
         height={blastzones[1][1] - blastzones[0][1]}
         fill="none"
-        class="stroke-slate-800"
+        class="stroke-slate-200"
       />
     </>
   );
@@ -288,11 +288,11 @@ function YoshisStory() {
       <Grid blastzones={blastzones} />
       <polyline
         points={mainStage.join(" ")}
-        class="fill-slate-800 stroke-slate-800"
+        class="fill-slate-200 stroke-slate-200"
       />
       <For each={platforms}>
         {(points) => (
-          <polyline points={points.join(" ")} class="stroke-slate-800" />
+          <polyline points={points.join(" ")} class="stroke-slate-200" />
         )}
       </For>
       <polyline points={randall().join(" ")} class="stroke-slate-400" />
@@ -302,7 +302,7 @@ function YoshisStory() {
         width={blastzones[1][0] - blastzones[0][0]}
         height={blastzones[1][1] - blastzones[0][1]}
         fill="none"
-        class="stroke-slate-800"
+        class="stroke-slate-200"
       />
     </>
   );
@@ -357,19 +357,19 @@ function FountainOfDreams() {
   return (
     <>
       <Grid blastzones={blastzones} />
-      <polyline points={mainStage.join(" ")} class="fill-slate-800" />
+      <polyline points={mainStage.join(" ")} class="fill-slate-200" />
       <For each={platforms.slice(0, 2)}>
         {(points) => (
           <polyline
             points={points.join(" ")}
             stroke-dasharray="2,4"
-            class="stroke-slate-800"
+            class="stroke-slate-200"
           />
         )}
       </For>
       <polyline
         points={platforms[platforms.length - 1].join(" ")}
-        class="stroke-slate-800"
+        class="stroke-slate-200"
       />
       <rect
         x={blastzones[0][0]}
@@ -377,7 +377,7 @@ function FountainOfDreams() {
         width={blastzones[1][0] - blastzones[0][0]}
         height={blastzones[1][1] - blastzones[0][1]}
         fill="none"
-        class="stroke-slate-800"
+        class="stroke-slate-200"
       />
     </>
   );
@@ -414,10 +414,10 @@ function PokemonStadium() {
   return (
     <>
       <Grid blastzones={blastzones} />
-      <polyline points={mainStage.join(" ")} class="fill-slate-800" />
+      <polyline points={mainStage.join(" ")} class="fill-slate-200" />
       <For each={platforms}>
         {(points) => (
-          <polyline points={points.join(" ")} class="stroke-slate-800" />
+          <polyline points={points.join(" ")} class="stroke-slate-200" />
         )}
       </For>
       <rect
@@ -426,7 +426,7 @@ function PokemonStadium() {
         width={blastzones[1][0] - blastzones[0][0]}
         height={blastzones[1][1] - blastzones[0][1]}
         fill="none"
-        class="stroke-slate-800"
+        class="stroke-slate-200"
       />
     </>
   );

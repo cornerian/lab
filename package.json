@@ -1,7 +1,7 @@
 {
-  "name": "slippilab",
+  "name": "@cornerian/lab",
   "version": "0.0.0",
-  "author": "Frank Borden",
+  "author": "Max Tretikov",
   "license": "MIT",
   "scripts": {
     "dev": "vite",

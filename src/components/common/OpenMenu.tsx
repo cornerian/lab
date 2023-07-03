@@ -1,7 +1,6 @@
 import * as menu from "@zag-js/menu";
 import { normalizeProps, useMachine } from "@zag-js/solid";
 import { createMemo, createUniqueId, Show } from "solid-js";
-import { loadFromSupabase } from "~/supabaseClient";
 import { PrimaryButton } from "~/components/common/Button";
 import { filterFiles } from "~/common/util";
 import { load } from "~/state/fileStore";
@@ -14,16 +13,13 @@ export function OpenMenu(props: { name?: string }) {
     menu.machine({
       id: createUniqueId(),
       "aria-label": "Open Replays",
-      onSelect: (value) => {
+      onSelect: ({ value }) => {
         switch (value) {
           case "file":
             fileInput.click();
             break;
           case "folder":
             folderInput.click();
-            break;
-          case "demo":
-            loadFromSupabase("sample", load);
             break;
         }
       },

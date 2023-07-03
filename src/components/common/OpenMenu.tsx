@@ -77,12 +77,6 @@ export function OpenMenu(props: { name?: string }) {
               >
                 Open Folder
               </li>
-              <li
-                {...api().getItemProps({ id: "demo" })}
-                class="w-full cursor-pointer py-2 px-4 hover:bg-slate-200"
-              >
-                Load Demo
-              </li>
             </ul>
           </div>
         </Portal>

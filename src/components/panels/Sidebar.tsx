@@ -8,7 +8,7 @@ import { localLibrary } from "~/state/selectionStore";
 export function Sidebar() {
   return (
     <>
-      <div class="hidden h-full w-96 overflow-y-auto py-4 lg:block">
+      <div class="hidden h-full w-96 border-r overflow-y-auto py-4 pr-4 lg:block">
         <Switch>
           <Match when={currentSidebar() === "local replays"}>
             <Replays selectionStore={localLibrary} />

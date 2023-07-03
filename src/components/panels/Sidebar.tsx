@@ -1,6 +1,7 @@
 import { currentSidebar } from "~/state/navigationStore";
 import { Switch, Match } from "solid-js";
 import { Replays } from "~/components/panels/Replays";
+import { Analysis } from "~/components/panels/Analysis";
 import { Clips } from "~/components/panels/Clips";
 import { Inputs } from "~/components/panels/Inputs";
 import { localLibrary } from "~/state/selectionStore";
@@ -12,6 +13,9 @@ export function Sidebar() {
         <Switch>
           <Match when={currentSidebar() === "local replays"}>
             <Replays selectionStore={localLibrary} />
+          </Match>
+          <Match when={currentSidebar() === "analysis"}>
+            <Analysis />
           </Match>
           <Match when={currentSidebar() === "clips"}>
             <Clips />
